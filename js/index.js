@@ -169,8 +169,10 @@
         });
     }
 
+    var isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+
     $(document).on('keydown', function(e) {
-        if (e.key == 'w' && e.ctrlKey) {
+        if (e.key == 'w' && (!isMac && e.altKey || isMac && e.ctrlKey)) {
             $('.popup#wiki').addClass('active');
 
             var selection = document.getSelection().toString();
