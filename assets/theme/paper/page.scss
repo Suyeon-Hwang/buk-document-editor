@@ -1,0 +1,134 @@
+body * {
+    font-family: sans-serif;
+    line-height: 1.7;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 1.5em 0 0.5em;
+
+    & + p {
+        text-indent: 0;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    & + h1, & + h2, & + h3, & + h4, & + h5, & + h6 {
+        margin-top: 0.8em;
+    }
+}
+
+h1 {
+    font-size: 1.5em;
+}
+h2 {
+    font-size: 1.4em;
+}
+h3 {
+    font-size: 1.3em;
+}
+h4 {
+    font-size: 1.2em;
+}
+h5 {
+    font-size: 1.1em;
+}
+h6 {
+    font-size: 1em;
+}
+p {
+    font-size: 0.95em;
+    margin: 0;
+    text-indent: 2em;
+    text-align: justify;
+}
+blockquote {
+    border: none;
+    color: inherit;
+    padding: 0 0 0 2em;
+    margin: 1em 0;
+
+    p {
+        line-height: 1.4;
+        font-size: 0.85em;
+        text-indent: 0;
+    }
+
+    p:not(:last-child) {
+        margin-bottom: 0.5em;
+    }
+    p:first-child {
+        text-indent: 0;
+    }
+}
+
+sup {
+    position: relative;
+    top: -0.4em;
+    vertical-align: top;
+}
+
+.journal-info {
+    border-bottom: 1px #383838 solid;
+
+    p {
+        text-indent: 0;
+    }
+
+    p:nth-child(1) {
+        float: left;
+    }
+
+    p:nth-child(2) {
+      text-align: right;
+    }
+}
+
+.title {
+    margin: 3.5em 0;
+    text-align: center; 
+
+    * {
+       text-align: center;  
+    }
+
+    &.ko p:last-child {
+        letter-spacing: 0.5em;
+
+        * {
+           letter-spacing: normal; 
+        }
+    }
+
+    &.sub-title p:nth-child(2) {
+        font-size: 1.1em;
+    }
+
+    p:last-child {
+        text-align: right;
+        margin-top: 2em;
+    }
+}
+
+.footnote {
+    margin-top: 5em;
+    border-top: 1px #383838 solid;
+    padding: 1em 0;
+    font-size: 0.85em;
+
+    blockquote {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.reference {
+    padding-left: 2em;
+    text-indent: -2em;
+
+    p {
+        text-indent: inherit;
+        text-align: left;
+    }
+}
+.signature {
+    text-align: right;
+}

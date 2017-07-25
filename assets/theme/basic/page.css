@@ -1,0 +1,307 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  line-height: 1.7; }
+  body > :last-child {
+    margin-bottom: 0 !important; }
+
+img {
+  margin: 0 0.2em;
+  max-width: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.275em;
+  margin-bottom: .85em;
+  font-weight: 700; }
+
+h1, h2, h3, h4, h5 {
+  page-break-after: avoid; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.75em; }
+
+h3 {
+  font-size: 1.5em; }
+
+h4 {
+  font-size: 1.25em; }
+
+h5, h6 {
+  font-size: 1em; }
+
+h6 {
+  color: #777; }
+
+a {
+  color: #4d75c2;
+  text-decoration: none;
+  background: 0 0; }
+
+code, pre {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  direction: ltr;
+  border: none;
+  color: inherit; }
+
+pre {
+  overflow: auto;
+  word-wrap: normal;
+  margin: 0 0 1.275em;
+  padding: .85em 1em;
+  background: #f7f7f7; }
+  pre > code {
+    display: inline;
+    max-width: initial;
+    padding: 0;
+    margin: 0;
+    overflow: initial;
+    line-height: inherit;
+    font-size: .85em;
+    white-space: pre;
+    background: 0 0; }
+    pre > code:before, pre > code:after {
+      content: normal; }
+
+code {
+  padding: .2em;
+  margin: 0;
+  font-size: .85em;
+  background-color: #f7f7f7; }
+  code:before, code:after {
+    letter-spacing: -.2em;
+    content: "\00a0"; }
+
+table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow: auto; }
+
+td, th {
+  padding: 6px 13px;
+  border: 1px solid #ddd; }
+
+tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc; }
+
+th {
+  font-weight: 700; }
+
+ol, ul {
+  padding: 0 0 0 2em;
+  margin: 0 0 .85em; }
+
+ol ol {
+  list-style-type: lower-roman; }
+
+blockquote {
+  margin: 0 0 .85em;
+  padding: 0 15px;
+  color: #858585;
+  border-left: 4px solid #e5e5e5; }
+  blockquote:first-child {
+    margin-top: 0; }
+  blockquote:last-child {
+    margin-bottom: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    padding: 0;
+    margin-top: .85em;
+    font-style: italic;
+    font-weight: 700; }
+  dl dd {
+    padding: 0 .85em;
+    margin-bottom: .85em; }
+
+dd {
+  margin-left: 0; }
+
+sup {
+  vertical-align: super;
+  font-size: smaller; }
+
+sub {
+  vertical-align: sub;
+  font-size: smaller; }
+
+em {
+  font-style: italic; }
+
+strong, b {
+  font-weight: bold; }
+
+hr {
+  height: 1px;
+  margin: 2.5em 0;
+  background-color: #ccc;
+  border: none; }
+
+blockquote, code, figure, img, pre, table, tr {
+  page-break-inside: avoid; }
+
+blockquote, dl, ol, p, table, ul {
+  margin-top: 0;
+  margin-bottom: .4em; }
+
+table {
+  margin: 0.85em 0; }
+
+body {
+  padding: 5px 15px; }
+
+hr {
+  margin-left: 30%;
+  margin-right: 30%; }
+
+p {
+  text-indent: 1em; }
+
+.section-divider + p {
+  text-indent: 0; }
+
+p.image, div.image {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid; }
+
+.image {
+  text-align: center; }
+
+p.image {
+  text-indent: 0; }
+  p.image.full img {
+    width: 100%; }
+
+div.image.caption p {
+  text-indent: 0;
+  font-size: 0.9em;
+  color: #666; }
+
+.poem p {
+  text-indent: 0; }
+  .poem p:not(:last-child) {
+    margin-bottom: 1.5em; }
+
+.quote {
+  margin: 0.85em 0;
+  padding: 0 0.85em;
+  color: #666;
+  border-left: 4px solid #e5e5e5; }
+  .quote p:first-child {
+    text-indent: 0; }
+
+.letter {
+  font-size: 0.9em;
+  line-height: 1.5;
+  font-family: monospace;
+  word-break: break-word;
+  text-align: left;
+  padding: 0 1.8em; }
+
+.copyright p, .contents p {
+  text-indent: 0; }
+
+.copyright .section-divider, .contents .section-divider, .author .section-divider {
+  height: 1.4em; }
+
+div.center {
+  text-align: center; }
+  div.center p {
+    text-indent: 0; }
+
+.signature {
+  margin-top: 1.2em; }
+  .signature p {
+    text-indent: 0;
+    margin: 0; }
+  .signature.right {
+    text-align: right; }
+
+li > p:first-child {
+  text-indent: 0; }
+
+.copyright {
+  font-size: 18px; }
+  @media only screen and (max-width: 425px) {
+    .copyright {
+      font-size: 16px; } }
+  .copyright .cover img {
+    width: 92px;
+    height: auto;
+    display: block;
+    margin: 0; }
+    @media only screen and (max-width: 425px) {
+      .copyright .cover img {
+        width: 78px; } }
+  .copyright .title {
+    font-weight: 600;
+    font-size: 1.445em;
+    margin-top: 0.95em;
+    line-height: 1.5; }
+  .copyright .title + .meta {
+    margin-top: 1em; }
+  .copyright .meta {
+    line-height: 1.7; }
+    .copyright .meta span {
+      font-weight: 500;
+      margin-right: 0.25em; }
+    .copyright .meta + .meta {
+      margin-top: 1.3em; }
+  .copyright .meta + .copyright-text {
+    font-size: 0.88em;
+    margin-top: 2.36em; }
+  .copyright .logo {
+    display: none;
+    margin-top: 3.778em; }
+    .copyright .logo div {
+      display: inline-block; }
+
+span.alternative {
+  font-size: 0.75em;
+  opacity: 0.7;
+  padding: 0 0.125em;
+  speak: none; }

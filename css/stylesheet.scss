@@ -1,0 +1,214 @@
+* {
+	box-sizing: border-box;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+button {
+	font-size: 1em;
+	cursor: pointer;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(0,0,0,0.3);
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(0,0,0,0.3);
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(0,0,0,0.3);
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: rgba(0,0,0,0.3);
+}
+
+.head {
+	height: 50px;
+	border-bottom: 1px silver solid;
+	display: flex;
+	align-items: center;
+	padding: 0 5px;
+
+	> * {
+		margin-right: 10px;
+	}
+}
+
+.main {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex: 1;
+}
+
+.main > * {
+	height: 100%;
+}
+
+.input, .output {
+	height: 100%;
+	flex: 1;
+	position: relative;
+}
+
+.input > * , .output > * {
+	width: 100%;
+}
+
+.divider {
+	width: 1px;
+	height: 100%;
+	background-color: silver;
+}
+
+textarea, iframe {
+	border: none;
+}
+
+textarea {
+	font-size: 1em;
+	width: 100%;
+	height: 100%;
+}
+
+.output {
+	.header {
+	    padding: 0 5px;
+	    height: 40px;
+	    line-height: 40px;
+	    border-bottom: 1px silver solid;
+	}
+
+	iframe {
+		height: calc(100% - 40px);
+	}
+}
+
+.tab-header {
+	height: 40px;
+	border-bottom: 1px silver solid;
+
+	.tab {
+		cursor: pointer;
+		display: inline-block;
+		height: 100%;
+    	line-height: 40px;
+    	padding: 0 5px;
+
+    	&.active {
+    		background-color: black;
+    		color: white;
+    	}
+	}
+}
+
+.tab-content {
+	height: calc(100% - 40px);
+	position: relative;
+}
+
+.textarea {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	visibility: hidden;
+	z-index: -1;
+
+	&.active {
+		visibility: visible;
+		z-index: 1;
+	}
+}
+
+.view-title {
+	position: absolute;
+	left:0;
+	top: 0;
+	width: auto;
+	color: white;
+	padding: 2px;
+}
+
+.popup {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	background-color: rgba(0,0,0,0.2);
+
+	display: none;
+	z-index: -1;
+
+	align-items: center;
+    justify-content: center;
+
+
+	&.active {
+		display: flex;
+		z-index: 10;
+	}
+
+	.popup-content {
+		position: relative;
+		background-color: white;
+	}
+
+	.close-button {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+	&#wiki .popup-content{
+		width: 80%;
+		height: 60%;
+
+		display: flex;
+
+		.search, iframe {
+			flex: 1;
+		}
+
+		.search {
+			padding: 10px;
+		}
+
+		.search-bar {
+			width: 100%;
+			display: flex;
+		}
+		input {
+			flex: 1;
+    		font-size: 1em;
+		}
+
+		.wiki-result {
+			height: calc(100% - 30px);
+
+			> div {
+				margin: 10px 0;
+			}
+
+			button {
+				float: right;
+				margin-right: 5px;
+			}
+		}
+	}
+}

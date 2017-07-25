@@ -1,0 +1,48 @@
+body * {
+  font-family: sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2em;
+  font-weight: normal; }
+
+h1, h2 {
+  text-align: center; }
+
+h3, h4, h5, h6 {
+  text-align: left; }
+
+h1, h3, h4, h5 {
+  font-weight: bold; }
+
+h1 {
+  font-size: 1.7em;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin-top: 3.54em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.2em; }
+
+h4 {
+  font-size: 1.1em; }
+
+h5 {
+  font-size: 1em; }
+
+h6 {
+  font-size: 0.95em; }
+
+blockquote {
+  color: #656565;
+  font-size: 0.9em;
+  padding: 0;
+  border-left: none; }
+  blockquote sup {
+    vertical-align: text-bottom;
+    font-size: 0.9em; }
+
+p {
+  text-indent: 0; }

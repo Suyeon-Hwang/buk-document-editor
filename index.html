@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>buk-document-editor</title>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/js.cookie.js"></script>
+    <script src="js/kramed-browserified.js"></script>
+</head>
+<body>
+    <div class="head">
+        <button id="convert">Update</button>
+        <input id="auto-update" type="checkbox"><label>Auto Update</label>
+        <div class="divider"></div>
+        <button id="wiki">Wiki</button>
+    </div>
+    <div class="main">
+        <div class="input">
+            <div class="tab-header">
+                <div class="tab active" tab-id="markdown">Markdown</div>
+                <div class="tab" tab-id="style">Stylesheet</div>
+                <div class="tab" tab-id="wiki">Wiki Keyword</div>
+            </div>
+            <div class="tab-content">
+                <div class="textarea active" id="markdown">
+                    <textarea></textarea>
+                </div>
+                <div class="textarea" id="style">
+                    <textarea></textarea>
+                </div>
+                <div class="textarea" id="wiki">
+                    <textarea></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="output">
+            <div class="header">Output</div>
+            <iframe></iframe>
+        </div>
+    </div>
+    <div class="popup" id="wiki">
+        <div class="popup-content">
+            <button class="close-button" id="popup-close">X</button>
+            <div class="search">
+                <div class="search-bar">
+                    <input id="wiki" placeholder="위키 링크 추가할 단어 입력">
+                    <button id="wiki-search">Search</button>
+                </div>
+                <div class="wiki-result"></div> 
+            </div>
+            <div class="divider"></div>
+            <iframe></iframe>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+@import url("http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic&subset=latin,latin-ext,cyrillic");
+
+body {
+  font-family: "PT Serif", "Baskerville", "Times", serif;
+  font-size: 1.2em;
+  color: #2e2e2e;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+  margin-top: 1.9em;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+}
+
+h2, h4, h6 {
+  font-weight: normal;
+}
+
+h5, h6 {
+  text-align: left;
+}
+
+h1, h2 {
+  font-size: 2em;
+}
+
+h3, h4 {
+  font-size: 1.9em;
+}
+
+h5, h6 {
+  font-size: 1.85em;
+}
+
+h1::after, hr {
+  width: 25%;
+  margin: 0 auto;
+}
+
+h1 {
+  &::after {
+    content: "";
+    height: 1px;
+    background: #2e2e2e;
+    width: 25%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 40px; 
+  }
+
+  &:first-child {
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+  }
+}
+
+p.pfirst::first-letter {
+  line-height: 1em;
+  font-size: 3em;
+  margin-right: 0.16em;
+}
+
+blockquote {
+  font-size: 0.9em;
+}

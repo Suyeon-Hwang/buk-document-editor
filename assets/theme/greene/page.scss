@@ -1,0 +1,50 @@
+@import url("http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic|Noticia+Text:400,700,400italic,700italic");
+
+body {
+  font-family: "PT Serif", "Georgia", serif;
+  font-size: 1.2em;
+  color: #2e2e2e;
+}
+
+a {
+  text-decoration: none; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2em;
+  text-transform: none;
+  font-size: 1.15em;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+h4, h5, h6 {
+  text-align: left;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+h2, h5, h6 {
+  font-weight: normal;
+}
+
+h3, h5, h6 {
+  font-style: italic;
+}
+
+h6 {
+  font-size: 0.95em;
+}
+
+blockquote {
+  font-size: 0.9em;
+}
+
+

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+h1, h2, h3 {
+  text-align: center; }
+
+h1 {
+  font-size: 1.25em; }
+
+h2 {
+  font-size: 1.125em; }
+
+h3 {
+  font-size: 1em; }
+
+h1:first-child:before, h2:first-child:before {
+  content: "♛";
+  display: block;
+  margin: 1em 0 0.5em 0;
+  font-size: 1rem; }
+
+.copyright, .contents {
+  text-align: center; }
+  .copyright .section-divider, .contents .section-divider {
+    height: 2em; }
+
+.contents .section-divider:first-child + p {
+  font-size: 1.5em;
+  line-height: 2; }
+
+.colophon p:first-child img {
+  max-width: 181px;
+  width: 30%; }
+
+.colophon img {
+  display: block;
+  margin: 1.5em auto; }
+
+.colophon .section-divider {
+  height: 1em; }
