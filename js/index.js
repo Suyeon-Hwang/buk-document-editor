@@ -138,7 +138,7 @@
         wikiFrame.attr('src', url.replace('ko', 'ko.m'));
     }
     window.wikiSelected = function(url, keyword) {
-        wikiTextarea.val(wikiTextarea.val() + ('\n' + keyword + ', ' + url));
+        wikiTextarea.val(wikiTextarea.val() + (keyword + ', ' + url + '\n'));
         setCookie('wiki', wikiTextarea.val());
         $('.popup#wiki').removeClass('active');
         wikiSearchInput.val('');
