@@ -221,7 +221,7 @@
                 if (response[0] == wikiSearchInput.val()) {
                     var resultsHtml = '';
                     for (i = 0; i < response[1].length; i++) {
-                        resultsHtml += '<div>' + response[1][i] + '<button onclick="wikiSelected(\'' + response[3][i].split('/wiki/')[1] + '\', \'' + keyword + '\')">Select</button><button onclick="wikiPreview(\'' + response[3][i] + '\')">Preview</button></div>'
+                        resultsHtml += '<div>' + response[1][i] + '<button onclick="wikiSelected(\'' + decodeURIComponent(response[3][i].split('/wiki/')[1]) + '\', \'' + keyword + '\')">Select</button><button onclick="wikiPreview(\'' + response[3][i] + '\')">Preview</button></div>'
                     }
                     wikiSearchResult[0].innerHTML = resultsHtml;
                 }
