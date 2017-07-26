@@ -43,7 +43,7 @@
         '  <link rel="stylesheet" type="text/css" href="assets/theme/basic/page.css">',
         '  <link id="page-css" rel="stylesheet" type="text/css" href="assets/theme/article/page.css">',
         '  <style id="custom-style"></style>',
-        '  <link rel="stylesheet" type="text/css" href="http://d3k696smqaxrrr.cloudfront.net/1.29.75/content.css">',
+        '  <link rel="stylesheet" type="text/css" href="http://d3k696smqaxrrr.cloudfront.net/1.29.81/content.css">',
         '</head>',
         '<body class="bu container comment loaded buk-layout-scroll" theme="light" zoom="100" font="default">',
         '  <div class="bu content comment">',
@@ -176,7 +176,7 @@
                 error = '항목을 모두 입력해주세요';
                 return false;
             }
-            if (this.id == 'yaml-date' && !/\d\d\d\d\-\d\d-\d\d/.test(this.value)) {
+            if (this.id == 'yaml-date' && !/\d{4}\-\d{2}-\d{2}/.test(this.value)) {
                 error = '올바른 형식이 아닙니다 (YYYY-MM-DD)';
                 return false;
             }
