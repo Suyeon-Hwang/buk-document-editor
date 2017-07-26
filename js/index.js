@@ -176,7 +176,7 @@
                 error = '항목을 모두 입력해주세요';
                 return false;
             }
-            if (this.id == 'yaml-date' && !/\d{4}\-\d{2}-\d{2}/.test(this.value)) {
+            if (this.id == 'yaml-date' && !/^\d{4}\-\d{2}-\d{2}$/.test(this.value)) {
                 error = '올바른 형식이 아닙니다 (YYYY-MM-DD)';
                 return false;
             }
