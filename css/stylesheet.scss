@@ -134,6 +134,21 @@ textarea {
 	}
 }
 
+.textarea#yaml {
+	> * {
+		height: 50%;
+		&:first-child {
+			border-bottom: 1px silver solid;
+			padding: 5px;
+		}
+
+		input {
+			font-size: 1em;
+			width: 100%;
+		}
+	}
+}
+
 .view-title {
 	position: absolute;
 	left:0;

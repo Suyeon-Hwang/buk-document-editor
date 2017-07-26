@@ -21,6 +21,7 @@
                 <div class="tab active" tab-id="markdown">Markdown</div>
                 <div class="tab" tab-id="style">Stylesheet</div>
                 <div class="tab" tab-id="wiki">Wiki Keyword</div>
+                <div class="tab" tab-id="yaml">Meta Data</div>
             </div>
             <div class="tab-content">
                 <div class="textarea active" id="markdown">
@@ -31,6 +32,34 @@
                 </div>
                 <div class="textarea" id="wiki">
                     <textarea></textarea>
+                </div>
+                <div class="textarea" id="yaml">
+                    <div class="form">
+                        <table>
+                            <tr>
+                                <td>Title</td>
+                                <td><input id="yaml-title"></td>
+                            </tr>
+                            <tr>
+                                <td>Author</td>
+                                <td><input id="yaml-creator"></td>
+                            </tr>
+                            <tr>
+                                <td>Publisher(Imprint)</td>
+                                <td><input id="yaml-publisher" placeholder="북이오"></td>
+                            </tr>
+                            <tr>
+                                <td>Language</td>
+                                <td><input id="yaml-language" placeholder="ko"></td>
+                            </tr>
+                            <tr>
+                                <td>Created Date</td>
+                                <td><input id="yaml-date" placeholder="YYYY-MM-DD"></td>
+                            </tr>
+                        </table>
+                        <button id="yaml">YAML</button>
+                    </div>
+                    <textarea readonly></textarea>
                 </div>
             </div>
         </div>

@@ -110,6 +110,15 @@ textarea {
     visibility: visible;
     z-index: 1; }
 
+.textarea#yaml > * {
+  height: 50%; }
+  .textarea#yaml > *:first-child {
+    border-bottom: 1px silver solid;
+    padding: 5px; }
+  .textarea#yaml > * input {
+    font-size: 1em;
+    width: 100%; }
+
 .view-title {
   position: absolute;
   left: 0;

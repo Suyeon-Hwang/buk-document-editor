@@ -23,6 +23,17 @@
     function getCookie(key) {
         return Cookies.get('buk-document-generator-' + key);
     }
+    function removeCookie(key) {
+        Cookies.remove('buk-document-generator-' + key);
+    }
+
+    //localstorage
+    function setLocalStorage(key, value) {
+        localStorage.setItem('buk-document-generator-' + key, value);
+    }
+    function getLocalStorage(key) {
+        return localStorage.getItem('buk-document-generator-' + key);
+    }
 
     /* bukio contents template */
     var CONTENT_TEMPLATE = [
@@ -48,6 +59,7 @@
     var markdownTextarea = $('.textarea#markdown textarea');
     var styleTextarea = $('.textarea#style textarea');
     var wikiTextarea = $('.textarea#wiki textarea');
+    var yamlTextarea = $('.textarea#yaml textarea');
     var wikiSearchInput = $('input#wiki');
     var autoUpdate = false;
 
@@ -60,12 +72,28 @@
     var customStyle = doc.querySelector('style#custom-style');
 
     // set value from cookie
+
+    // cookie -> localstorage
     var savedMarkdown = getCookie('markdown');
+    if (savedMarkdown && !getLocalStorage('markdown')) {
+        setLocalStorage('markdown', savedMarkdown);
+        removeCookie('markdown');
+    }
+    savedMarkdown = getLocalStorage('markdown');
+    if (savedMarkdown) {
+        markdownTextarea.val(savedMarkdown);
+    }
+
     var savedStyle = getCookie('style');
     var savedWiki = getCookie('wiki');
-    if (savedMarkdown) markdownTextarea.val(savedMarkdown);
     if (savedStyle) styleTextarea.val(savedStyle);
     if (savedWiki) wikiTextarea.val(savedWiki);
+
+    var savedYaml;
+    $('.textarea#yaml input[id^="yaml"]').each(function() {
+        savedYaml = getCookie(this.id);
+        if (savedYaml) this.value = savedYaml;
+    });
 
     // handle event
     $('button#convert').on('click', function() {
@@ -83,6 +111,10 @@
 
     $('button#wiki-search').on('click', function() {
         searchWiki(wikiSearchInput.val());
+    });
+
+    $('button#yaml').on('click', function() {
+        generateYamlHeader();
     });
 
     $('input#auto-update').on('change', function() {
@@ -106,9 +138,13 @@
         });
     });
 
+    $('.textarea#yaml input[id^="yaml"]').on('keyup', debounce(function() {
+        setCookie(this.id, this.value);
+    }, 500));
+
     markdownTextarea.on('keyup', debounce(function() {
         if (autoUpdate) convert(markdownTextarea.val());
-        setCookie('markdown', markdownTextarea.val());
+        setLocalStorage('markdown', markdownTextarea.val());
     }, 500));
 
     styleTextarea.on('keyup', debounce(function() {
@@ -129,6 +165,30 @@
         Kramed(mdString, function(error, outputHtml) {
             bucontent.innerHTML = outputHtml;
         });
+    }
+
+    function generateYamlHeader() {
+        var result = '---\n';
+        var error = undefined;
+
+        $('.textarea#yaml input').each(function() {
+            if (this.value.length == 0) {
+                error = '항목을 모두 입력해주세요';
+                return false;
+            }
+            if (this.id == 'yaml-date' && !/\d\d\d\d\-\d\d-\d\d/.test(this.value)) {
+                error = '올바른 형식이 아닙니다 (YYYY-MM-DD)';
+                return false;
+            }
+            result += this.id.split('-')[1] + ': ' + this.value + '\n';
+        });
+
+        if (error) {
+            window.alert(error);
+        } else {
+            result += 'format: text/html\ntype: document\ntheme: article\ncopyright: false\n---';
+            $('.textarea#yaml textarea').val(result);
+        }
     }
 
     var wikiSearchResult = $('.wiki-result');
