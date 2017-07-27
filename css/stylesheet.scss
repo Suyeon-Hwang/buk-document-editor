@@ -1,6 +1,10 @@
 * {
 	box-sizing: border-box;
 }
+html {
+	width: 100%;
+	height: 100%;
+}
 html, body {
 	margin: 0;
 	padding: 0;
@@ -13,6 +17,17 @@ body {
 	left: 0;
 	display: flex;
 	flex-direction: column;
+
+	&.gyeongjin {
+		background-image: url('http://postfiles16.naver.net/MjAxNzA3MjhfOTEg/MDAxNTAxMTY4OTc4NzIy.GmuTlQpxweQvHcr-6kmAVjB1nzql7le0LCyO7V_IR0sg.RlQzCDBtmjIbXOXU_aGmrDhx7lNamMiHqKURr01dLz4g.JPEG.h_suyeon/bg-1.jpg?type=w1');
+	    background-repeat: no-repeat;
+	    background-size: cover;
+
+	    textarea {
+	    	background: transparent;
+	    	color: white;
+	    }
+	}
 }
 
 button {

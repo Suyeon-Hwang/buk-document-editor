@@ -246,5 +246,13 @@
             }
         }
     });
+
+    window.gyeongjin = function() {
+        if ($('body').hasClass('gyeongjin')) {
+            $('body').removeClass('gyeongjin')
+        } else {
+            $('body').addClass('gyeongjin')
+        }
+    }
 })();
 
