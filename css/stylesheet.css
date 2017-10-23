@@ -17,13 +17,6 @@ body {
   left: 0;
   display: flex;
   flex-direction: column; }
-  body.gyeongjin {
-    background-image: url("http://postfiles16.naver.net/MjAxNzA3MjhfOTEg/MDAxNTAxMTY4OTc4NzIy.GmuTlQpxweQvHcr-6kmAVjB1nzql7le0LCyO7V_IR0sg.RlQzCDBtmjIbXOXU_aGmrDhx7lNamMiHqKURr01dLz4g.JPEG.h_suyeon/bg-1.jpg?type=w1");
-    background-repeat: no-repeat;
-    background-size: cover; }
-    body.gyeongjin textarea {
-      background: transparent;
-      color: white; }
 
 button {
   font-size: 1em;

@@ -43,7 +43,7 @@
         '  <link rel="stylesheet" type="text/css" href="assets/theme/basic/page.css">',
         '  <link id="page-css" rel="stylesheet" type="text/css" href="assets/theme/article/page.css">',
         '  <style id="custom-style"></style>',
-        '  <link rel="stylesheet" type="text/css" href="http://d3k696smqaxrrr.cloudfront.net/1.29.81/content.css">',
+        '  <link rel="stylesheet" type="text/css" href="http://d1tlei7mbg57yo.cloudfront.net/1.30.34/content.css">',
         '</head>',
         '<body class="bu container comment loaded buk-layout-scroll" theme="light" zoom="100" font="default">',
         '  <div class="bu content comment">',
@@ -246,13 +246,5 @@
             }
         }
     });
-
-    window.gyeongjin = function() {
-        if ($('body').hasClass('gyeongjin')) {
-            $('body').removeClass('gyeongjin')
-        } else {
-            $('body').addClass('gyeongjin')
-        }
-    }
 })();
 
