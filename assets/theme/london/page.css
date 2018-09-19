@@ -161,6 +161,7 @@ ul, ol {
 
 div.image.caption img {
   max-height: 80vh !important; }
+
 div.image.caption p {
   font-size: 0.85em; }
 
@@ -186,5 +187,3 @@ div.copyright {
 
 td, th {
   border-color: #aaa; }
-
-/*# sourceMappingURL=page.css.map */

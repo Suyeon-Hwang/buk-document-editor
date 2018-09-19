@@ -38,14 +38,14 @@
     /* bukio contents template */
     var CONTENT_TEMPLATE = [
         '<!DOCTYPE html>',
-        '<html>',
+        '<html class="buk-layout-scroll" theme="light" zoom="100" font="default">',
         '<head>',
         '  <link rel="stylesheet" type="text/css" href="assets/theme/basic/page.css">',
         '  <link id="page-css" rel="stylesheet" type="text/css" href="assets/theme/article/page.css">',
         '  <style id="custom-style"></style>',
-        '  <link rel="stylesheet" type="text/css" href="http://d1tlei7mbg57yo.cloudfront.net/1.30.34/content.css">',
+        '  <link rel="stylesheet" type="text/css" href="http://s.buk.io/assets/contents/css/content.css">',
         '</head>',
-        '<body class="bu container comment loaded buk-layout-scroll" theme="light" zoom="100" font="default">',
+        '<body class="bu container comment loaded buk-layout-scroll">',
         '  <div class="bu content comment">',
         '  </div>',
         '  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>',
